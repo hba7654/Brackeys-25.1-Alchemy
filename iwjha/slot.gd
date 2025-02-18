@@ -27,7 +27,7 @@ enum Ingredients{
 	Fairy_Dust = 15
 }
 
-var potions = {
+const POTIONS = {
 	[Ingredients.Marigold, Ingredients.Brown_Mushroom, Ingredients.Fairy_Dust]: "Health Potion",
 	[Ingredients.Marigold, Ingredients.Red_Mushroom, Ingredients.Fairy_Dust]: "Health Potion",
 	[Ingredients.Nightshade, Ingredients.Brown_Mushroom, Ingredients.Ice_Wraith_Teeth]: "Poison Potion",
@@ -65,7 +65,7 @@ func _process(delta: float) -> void:
 	
 func _brew() -> String:
 	_contents.sort()
-	return potions[_contents] if potions.has(_contents) else _fail()
+	return POTIONS[_contents] if POTIONS.has(_contents) else _fail()
 
 		
 func _fail() -> String:
