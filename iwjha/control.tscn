@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
 [ext_resource type="Script" path="res://slot.gd" id="2_pktdi"]
 [ext_resource type="PackedScene" uid="uid://rpumhyxptprg" path="res://item.tscn" id="3_sauvc"]
-[ext_resource type="Texture2D" uid="uid://bfg7u2biev2ha" path="res://Assets/Thistle.png" id="5_xkbwm"]
+[ext_resource type="Texture2D" uid="uid://bfg7u2biev2ha" path="res://Assets/Items/Thistle.png" id="5_xkbwm"]
 
 [node name="UI" type="Control"]
 layout_mode = 3

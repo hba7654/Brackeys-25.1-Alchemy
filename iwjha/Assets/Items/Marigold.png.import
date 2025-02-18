@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfg7u2biev2ha"
-path="res://.godot/imported/Thistle.png-4a6a4fde1327ca75993c6729ebe58ebe.ctex"
+uid="uid://d3ptmbpdesg13"
+path="res://.godot/imported/Marigold.png-3aa9ebbda28d64ee54b8c099be07beba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Thistle.png"
-dest_files=["res://.godot/imported/Thistle.png-4a6a4fde1327ca75993c6729ebe58ebe.ctex"]
+source_file="res://Assets/Items/Marigold.png"
+dest_files=["res://.godot/imported/Marigold.png-3aa9ebbda28d64ee54b8c099be07beba.ctex"]
 
 [params]
 
