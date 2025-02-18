@@ -3,9 +3,9 @@ extends Container
 const _FIRST_FLOWER: int = 0
 const _LAST_FLOWER: int = 4
 const _FIRST_ROOT: int = 5
-const _LAST_ROOT: int = 9
-const _FIRST_ANIMAL: int = 10
-const _LAST_ANIMAL: int = 14
+const _LAST_ROOT: int = 10
+const _FIRST_ANIMAL: int = 11
+const _LAST_ANIMAL: int = 15
 var currPotion = ""
 
 enum Ingredients{
@@ -13,21 +13,36 @@ enum Ingredients{
 	Nightshade = 1,
 	Lavender = 2,
 	Marigold = 3,
-	Bumblebee = 4,
-	Eyeballs = 5,
-	Brown_Mushroom = 6,
-	Red_Mushroom = 7,
-	Heart = 8,
-	Moth_Wings = 9,
-	Chaurus_Egg = 10,
-	Dragon_Egg = 11,
-	Slime_Egg = 12,
-	Ice_Teeth = 13
+	Juniper_Berries = 4,
+	Taproot = 5,
+	Cinnamon = 6,
+	Brown_Mushroom = 7,
+	Red_Mushroom = 8,
+	Nirnroot = 9,
+	Fire_Salts = 10,
+	Chaurus_Egg = 11,
+	Ice_Wraith_Teeth = 12,
+	Lizard_Tail = 13,
+	Eyeballs = 14,
+	Fairy_Dust = 15
 }
 
 var potions = {
-	[3,6,13]: "Health Potion",
-	[3,7,13]: "Health Potion"
+	[Ingredients.Marigold, Ingredients.Brown_Mushroom, Ingredients.Fairy_Dust]: "Health Potion",
+	[Ingredients.Marigold, Ingredients.Red_Mushroom, Ingredients.Fairy_Dust]: "Health Potion",
+	[Ingredients.Nightshade, Ingredients.Brown_Mushroom, Ingredients.Ice_Wraith_Teeth]: "Poison Potion",
+	[Ingredients.Nightshade, Ingredients.Brown_Mushroom, Ingredients.Lizard_Tail]: "Poison Potion",
+	[Ingredients.Thistle, Ingredients.Taproot, Ingredients.Chaurus_Egg]: "Alchohol Immunity Potion",
+	[Ingredients.Juniper_Berries, Ingredients.Taproot, Ingredients.Chaurus_Egg]: "Alchohol Immunity Potion",
+	[Ingredients.Marigold, Ingredients.Fire_Salts, Ingredients.Lizard_Tail]: "Fire Resistance Potion",
+	[Ingredients.Lavender, Ingredients.Taproot, Ingredients.Fairy_Dust]: "Romeo/Juliet Potion",	
+	[Ingredients.Lavender, Ingredients.Nirnroot, Ingredients.Fairy_Dust]: "Romeo/Juliet Potion",
+	[Ingredients.Thistle, Ingredients.Nirnroot, Ingredients.Eyeballs]: "Munster Energy Potion",
+	[Ingredients.Thistle, Ingredients.Nirnroot, Ingredients.Chaurus_Egg]: "Munster Energy Potion",
+	[Ingredients.Nightshade, Ingredients.Taproot, Ingredients.Eyeballs]: "Stealth Potion",
+	[Ingredients.Nightshade, Ingredients.Red_Mushroom, Ingredients.Eyeballs]: "Stealth Potion",
+	[Ingredients.Juniper_Berries, Ingredients.Fire_Salts, Ingredients.Ice_Wraith_Teeth]: "All On Red Potion",
+	[Ingredients.Lavender, Ingredients.Fire_Salts, Ingredients.Ice_Wraith_Teeth]: "All On Red Potion",
 }
 
 var _contents = []
