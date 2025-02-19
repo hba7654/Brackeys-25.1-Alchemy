@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bccm51t5q2cil"
-path="res://.godot/imported/MPO!_Background.png-c7a055df017102e8af01152785471c7d.ctex"
+uid="uid://bylt5m3jyxydv"
+path="res://.godot/imported/Cinnamon.png-eacf64d6b69a53e974d9f59ce471e628.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MPO!_Background.png"
-dest_files=["res://.godot/imported/MPO!_Background.png-c7a055df017102e8af01152785471c7d.ctex"]
+source_file="res://Assets/Items/Cinnamon.png"
+dest_files=["res://.godot/imported/Cinnamon.png-eacf64d6b69a53e974d9f59ce471e628.ctex"]
 
 [params]
 

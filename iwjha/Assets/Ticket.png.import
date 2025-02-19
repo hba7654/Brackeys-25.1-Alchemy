@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bccm51t5q2cil"
-path="res://.godot/imported/MPO!_Background.png-c7a055df017102e8af01152785471c7d.ctex"
+uid="uid://b8w2tvquq1i27"
+path="res://.godot/imported/Ticket.png-d5063f3abbed4946b225ed9a2ff0446d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MPO!_Background.png"
-dest_files=["res://.godot/imported/MPO!_Background.png-c7a055df017102e8af01152785471c7d.ctex"]
+source_file="res://Assets/Ticket.png"
+dest_files=["res://.godot/imported/Ticket.png-d5063f3abbed4946b225ed9a2ff0446d.ctex"]
 
 [params]
 
