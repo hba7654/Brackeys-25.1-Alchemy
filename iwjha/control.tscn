@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
-[ext_resource type="Texture2D" uid="uid://cjh54t2vgjfpf" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
+[ext_resource type="Texture2D" uid="uid://bccm51t5q2cil" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
 [ext_resource type="Script" path="res://slot.gd" id="2_pktdi"]
 [ext_resource type="PackedScene" uid="uid://rpumhyxptprg" path="res://item.tscn" id="3_sauvc"]
 [ext_resource type="Texture2D" uid="uid://bfg7u2biev2ha" path="res://Assets/Items/Thistle.png" id="5_xkbwm"]
