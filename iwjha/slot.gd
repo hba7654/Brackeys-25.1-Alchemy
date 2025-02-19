@@ -1,4 +1,5 @@
 extends Container
+signal Potion_Brewed(type: String)
 
 const _FIRST_FLOWER: int = 0
 const _LAST_FLOWER: int = 4
@@ -65,7 +66,11 @@ func _process(delta: float) -> void:
 	
 func _brew() -> String:
 	_contents.sort()
-	return POTIONS[_contents] if POTIONS.has(_contents) else _fail()
+	if POTIONS.has(_contents):
+		Potion_Brewed.emit(POTIONS[_contents])
+		return POTIONS[_contents]
+	else:
+		return _fail()
 
 		
 func _fail() -> String:

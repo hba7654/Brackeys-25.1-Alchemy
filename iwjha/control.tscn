@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=10 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
 [ext_resource type="Texture2D" uid="uid://cjh54t2vgjfpf" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bbadlxbm46job" path="res://Assets/Items/Nightshade.png" id="6_1tqn1"]
 [ext_resource type="Texture2D" uid="uid://cx5ss7aj0xae1" path="res://Assets/Items/Lavender.png" id="7_lq6uc"]
 [ext_resource type="Texture2D" uid="uid://d3ptmbpdesg13" path="res://Assets/Items/Marigold.png" id="8_26ia2"]
+[ext_resource type="Script" path="res://requests.gd" id="9_68357"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -78,3 +79,13 @@ anchor_right = 0.243924
 anchor_bottom = 0.472222
 texture = ExtResource("8_26ia2")
 id = 3
+
+[node name="Requests" type="Node" parent="."]
+script = ExtResource("9_68357")
+
+[node name="RequestTimer" type="Timer" parent="Requests"]
+wait_time = 10.0
+autostart = true
+
+[connection signal="Potion_Brewed" from="Cauldron" to="Requests" method="_on_cauldron_potion_brewed"]
+[connection signal="timeout" from="Requests/RequestTimer" to="Requests" method="_on_request_timer_timeout"]
