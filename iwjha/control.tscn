@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=9 format=3 uid="uid://71iyctxttt1i"]
 
-[ext_resource type="Texture2D" uid="uid://c2d5ts1kbnfy1" path="res://Assets/tempBackground.png" id="1_djqje"]
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
+[ext_resource type="Texture2D" uid="uid://cjh54t2vgjfpf" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
 [ext_resource type="Script" path="res://slot.gd" id="2_pktdi"]
 [ext_resource type="PackedScene" uid="uid://rpumhyxptprg" path="res://item.tscn" id="3_sauvc"]
 [ext_resource type="Texture2D" uid="uid://bfg7u2biev2ha" path="res://Assets/Items/Thistle.png" id="5_xkbwm"]
+[ext_resource type="Texture2D" uid="uid://bbadlxbm46job" path="res://Assets/Items/Nightshade.png" id="6_1tqn1"]
+[ext_resource type="Texture2D" uid="uid://cx5ss7aj0xae1" path="res://Assets/Items/Lavender.png" id="7_lq6uc"]
+[ext_resource type="Texture2D" uid="uid://d3ptmbpdesg13" path="res://Assets/Items/Marigold.png" id="8_26ia2"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -23,62 +26,55 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_djqje")
+texture = ExtResource("2_jg5lu")
 expand_mode = 1
 
 [node name="Cauldron" type="Container" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.344618
-anchor_top = 0.339506
-anchor_right = 0.615035
-anchor_bottom = 0.74537
+anchor_left = 0.3125
+anchor_top = 0.25
+anchor_right = 0.657569
+anchor_bottom = 0.655864
 offset_top = 1.52588e-05
 offset_right = -134.52
 scale = Vector2(1.76, 1)
 script = ExtResource("2_pktdi")
 metadata/_edit_use_anchors_ = true
 
-[node name="item" parent="." instance=ExtResource("3_sauvc")]
+[node name="Thistle" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.00694444
-anchor_top = 0.146605
-anchor_right = 0.143229
-anchor_bottom = 0.354938
-offset_left = 0.0
-offset_top = 7.62939e-06
-offset_right = 0.0
+anchor_left = 0.0138889
+anchor_top = 0.220679
+anchor_right = 0.0538194
+anchor_bottom = 0.319444
 offset_bottom = -1.52588e-05
 texture = ExtResource("5_xkbwm")
-expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
-[node name="item2" parent="." instance=ExtResource("3_sauvc")]
+[node name="Nightshade" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.141493
-anchor_top = 0.143519
-anchor_right = 0.252604
-anchor_bottom = 0.341049
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
+anchor_left = 0.192708
+anchor_top = 0.248457
+anchor_right = 0.242188
+anchor_bottom = 0.327161
+texture = ExtResource("6_1tqn1")
 id = 1
-metadata/_edit_use_anchors_ = true
 
-[node name="item3" parent="." instance=ExtResource("3_sauvc")]
+[node name="Lavender" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.773437
-anchor_top = 0.608025
-anchor_right = 0.884548
-anchor_bottom = 0.805556
-offset_left = 0.0
+anchor_left = 0.0260417
+anchor_top = 0.378086
+anchor_right = 0.140625
+anchor_bottom = 0.469136
 offset_top = -3.05176e-05
-offset_right = 0.0
-offset_bottom = 0.0
-expand_mode = 1
+texture = ExtResource("7_lq6uc")
 id = 2
-metadata/_edit_use_anchors_ = true
+
+[node name="Marigold" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.18316
+anchor_top = 0.382716
+anchor_right = 0.243924
+anchor_bottom = 0.472222
+texture = ExtResource("8_26ia2")
+id = 3

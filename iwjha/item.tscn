@@ -4,9 +4,12 @@
 [ext_resource type="Script" path="res://drag_object.gd" id="2_g43kv"]
 
 [node name="item" type="TextureRect"]
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
+anchors_preset = -1
+anchor_left = -0.0555556
+anchor_top = -0.0987654
+anchor_right = 0.0555556
+anchor_bottom = 0.0987654
 texture = ExtResource("1_f27di")
+expand_mode = 1
 script = ExtResource("2_g43kv")
+metadata/_edit_use_anchors_ = true
