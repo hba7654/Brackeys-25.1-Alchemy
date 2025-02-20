@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=11 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
 [ext_resource type="Texture2D" uid="uid://bccm51t5q2cil" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cx5ss7aj0xae1" path="res://Assets/Items/Lavender.png" id="7_lq6uc"]
 [ext_resource type="Texture2D" uid="uid://d3ptmbpdesg13" path="res://Assets/Items/Marigold.png" id="8_26ia2"]
 [ext_resource type="Script" path="res://requests.gd" id="9_68357"]
+[ext_resource type="PackedScene" uid="uid://dex4sdxwtrrm5" path="res://ticket.tscn" id="10_np0i0"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -86,6 +87,36 @@ script = ExtResource("9_68357")
 [node name="RequestTimer" type="Timer" parent="Requests"]
 wait_time = 10.0
 autostart = true
+
+[node name="Ticket1" parent="Requests" instance=ExtResource("10_np0i0")]
+visible = false
+anchor_left = 0.934028
+anchor_top = 0.0787037
+anchor_right = 0.989583
+anchor_bottom = 0.212963
+
+[node name="Ticket2" parent="Requests" instance=ExtResource("10_np0i0")]
+visible = false
+anchor_left = 0.934896
+anchor_top = 0.37963
+anchor_right = 0.990451
+anchor_bottom = 0.513889
+offset_top = -1.52588e-05
+
+[node name="Ticket3" parent="Requests" instance=ExtResource("10_np0i0")]
+visible = false
+anchor_left = 0.921875
+anchor_top = 0.234568
+anchor_right = 0.977431
+anchor_bottom = 0.368827
+
+[node name="Ticket4" parent="Requests" instance=ExtResource("10_np0i0")]
+visible = false
+anchor_left = 0.925347
+anchor_top = 0.529321
+anchor_right = 0.980903
+anchor_bottom = 0.66358
+offset_top = -3.05176e-05
 
 [connection signal="Potion_Brewed" from="Cauldron" to="Requests" method="_on_cauldron_potion_brewed"]
 [connection signal="timeout" from="Requests/RequestTimer" to="Requests" method="_on_request_timer_timeout"]
