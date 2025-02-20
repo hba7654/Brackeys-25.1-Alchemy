@@ -1,15 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=15 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
 [ext_resource type="Texture2D" uid="uid://bccm51t5q2cil" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
 [ext_resource type="Script" path="res://slot.gd" id="2_pktdi"]
 [ext_resource type="PackedScene" uid="uid://rpumhyxptprg" path="res://item.tscn" id="3_sauvc"]
+[ext_resource type="Texture2D" uid="uid://drbhvf6ms0ijq" path="res://Assets/Items/JuniperBerries.png" id="5_a7po6"]
 [ext_resource type="Texture2D" uid="uid://bfg7u2biev2ha" path="res://Assets/Items/Thistle.png" id="5_xkbwm"]
 [ext_resource type="Texture2D" uid="uid://bbadlxbm46job" path="res://Assets/Items/Nightshade.png" id="6_1tqn1"]
 [ext_resource type="Texture2D" uid="uid://cx5ss7aj0xae1" path="res://Assets/Items/Lavender.png" id="7_lq6uc"]
 [ext_resource type="Texture2D" uid="uid://d3ptmbpdesg13" path="res://Assets/Items/Marigold.png" id="8_26ia2"]
 [ext_resource type="Script" path="res://requests.gd" id="9_68357"]
+[ext_resource type="Texture2D" uid="uid://cpdndksr15m25" path="res://Assets/Items/Taproot.png" id="10_dw8en"]
 [ext_resource type="PackedScene" uid="uid://dex4sdxwtrrm5" path="res://ticket.tscn" id="10_np0i0"]
+[ext_resource type="Texture2D" uid="uid://bylt5m3jyxydv" path="res://Assets/Items/Cinnamon.png" id="11_xvppc"]
+[ext_resource type="Texture2D" uid="uid://bfjec41dfspvv" path="res://Assets/Items/BrownMushroom.png" id="12_42w0p"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -44,12 +48,21 @@ scale = Vector2(1.76, 1)
 script = ExtResource("2_pktdi")
 metadata/_edit_use_anchors_ = true
 
+[node name="JuniperBerries" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.0685764
+anchor_top = 0.333333
+anchor_right = 0.176215
+anchor_bottom = 0.402778
+texture = ExtResource("5_a7po6")
+id = 4
+
 [node name="Thistle" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.0138889
-anchor_top = 0.220679
-anchor_right = 0.0538194
-anchor_bottom = 0.319444
+anchor_left = 0.0199653
+anchor_top = 0.253086
+anchor_right = 0.0520833
+anchor_bottom = 0.320988
 offset_bottom = -1.52588e-05
 texture = ExtResource("5_xkbwm")
 
@@ -64,9 +77,9 @@ id = 1
 
 [node name="Lavender" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.0260417
-anchor_top = 0.378086
-anchor_right = 0.140625
+anchor_left = 0.0121528
+anchor_top = 0.410494
+anchor_right = 0.105903
 anchor_bottom = 0.469136
 offset_top = -3.05176e-05
 texture = ExtResource("7_lq6uc")
@@ -74,12 +87,38 @@ id = 2
 
 [node name="Marigold" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.18316
-anchor_top = 0.382716
-anchor_right = 0.243924
-anchor_bottom = 0.472222
+anchor_left = 0.194444
+anchor_top = 0.404321
+anchor_right = 0.237847
+anchor_bottom = 0.464506
 texture = ExtResource("8_26ia2")
 id = 3
+
+[node name="Taproot" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.315972
+anchor_top = 0.0740741
+anchor_right = 0.380208
+anchor_bottom = 0.191358
+texture = ExtResource("10_dw8en")
+id = 5
+
+[node name="Cinnamon" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.493924
+anchor_top = 0.0941358
+anchor_right = 0.518229
+anchor_bottom = 0.185185
+texture = ExtResource("11_xvppc")
+id = 6
+
+[node name="BrownMushroom" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.400174
+anchor_top = 0.100309
+anchor_right = 0.460069
+anchor_bottom = 0.189815
+texture = ExtResource("12_42w0p")
 
 [node name="Requests" type="Node" parent="."]
 script = ExtResource("9_68357")
