@@ -48,15 +48,15 @@ const POTIONS = {
 
 var _contents = []
 
-func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	return true
-	return false
+	#return false
 	
-func _drop_data(at_position: Vector2, data: Variant) -> void:
+func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	_contents.push_back(data)
 	print(_contents)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if _contents.size() == 3:
 		currPotion = _brew()
 		_contents = []	
