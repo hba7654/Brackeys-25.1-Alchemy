@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=25 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
 [ext_resource type="Texture2D" uid="uid://c1r7uso83dp2w" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
@@ -17,8 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://cx0rd2nc17i0x" path="res://Assets/Items/RedMushroom.png" id="13_ism3j"]
 [ext_resource type="Texture2D" uid="uid://cwojypd3m5mks" path="res://Assets/Items/Nirnroot.png" id="14_6pt30"]
 [ext_resource type="Texture2D" uid="uid://bmjuff4scs23k" path="res://Assets/Items/FireSalt.png" id="15_onyiw"]
+[ext_resource type="Texture2D" uid="uid://q40pl17g77tj" path="res://Assets/Items/ChaurusEgg.png" id="16_6p8qr"]
+[ext_resource type="Texture2D" uid="uid://codmhtbqwjl4" path="res://Assets/Items/IceWraithTeeth.png" id="17_g4o5r"]
+[ext_resource type="Texture2D" uid="uid://drjchvhbdhld8" path="res://Assets/Items/LizardTail.png" id="18_5d0gs"]
 [ext_resource type="Texture2D" uid="uid://b8w2tvquq1i27" path="res://Assets/Ticket.png" id="18_jmida"]
+[ext_resource type="Texture2D" uid="uid://cygdrobxpflnk" path="res://Assets/Items/Eyeball.png" id="19_3k45i"]
 [ext_resource type="Script" path="res://book.gd" id="19_iuyn2"]
+[ext_resource type="Texture2D" uid="uid://br3rjj4nps564" path="res://Assets/Items/FairyDust.png" id="20_5o6mr"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -124,6 +129,7 @@ anchor_top = 0.118827
 anchor_right = 0.425346
 anchor_bottom = 0.208333
 texture = ExtResource("12_42w0p")
+id = 7
 
 [node name="RedMushroom" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
@@ -151,6 +157,51 @@ anchor_right = 0.500868
 anchor_bottom = 0.216049
 texture = ExtResource("15_onyiw")
 id = 10
+
+[node name="ChaurusEgg" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.826389
+anchor_top = 0.822531
+anchor_right = 0.855903
+anchor_bottom = 0.888889
+texture = ExtResource("16_6p8qr")
+id = 11
+
+[node name="IceWraithTeeth" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.78125
+anchor_top = 0.830247
+anchor_right = 0.811632
+anchor_bottom = 0.887346
+texture = ExtResource("17_g4o5r")
+id = 12
+
+[node name="LizardTail" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.813368
+anchor_top = 0.763889
+anchor_right = 0.845486
+anchor_bottom = 0.817901
+texture = ExtResource("18_5d0gs")
+id = 13
+
+[node name="Eyeball" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.809896
+anchor_top = 0.680556
+anchor_right = 0.828125
+anchor_bottom = 0.709877
+texture = ExtResource("19_3k45i")
+id = 14
+
+[node name="FairyDust" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.767361
+anchor_top = 0.75463
+anchor_right = 0.809028
+anchor_bottom = 0.805556
+texture = ExtResource("20_5o6mr")
+id = 15
 
 [node name="Requests" type="Node" parent="."]
 script = ExtResource("9_68357")
