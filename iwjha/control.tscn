@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=20 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
-[ext_resource type="Texture2D" uid="uid://bccm51t5q2cil" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
+[ext_resource type="Texture2D" uid="uid://c1r7uso83dp2w" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
 [ext_resource type="Script" path="res://slot.gd" id="2_pktdi"]
 [ext_resource type="PackedScene" uid="uid://rpumhyxptprg" path="res://item.tscn" id="3_sauvc"]
 [ext_resource type="Texture2D" uid="uid://drbhvf6ms0ijq" path="res://Assets/Items/JuniperBerries.png" id="5_a7po6"]
@@ -14,6 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://dex4sdxwtrrm5" path="res://ticket.tscn" id="10_np0i0"]
 [ext_resource type="Texture2D" uid="uid://bylt5m3jyxydv" path="res://Assets/Items/Cinnamon.png" id="11_xvppc"]
 [ext_resource type="Texture2D" uid="uid://bfjec41dfspvv" path="res://Assets/Items/BrownMushroom.png" id="12_42w0p"]
+[ext_resource type="Texture2D" uid="uid://cx0rd2nc17i0x" path="res://Assets/Items/RedMushroom.png" id="13_ism3j"]
+[ext_resource type="Texture2D" uid="uid://cwojypd3m5mks" path="res://Assets/Items/Nirnroot.png" id="14_6pt30"]
+[ext_resource type="Texture2D" uid="uid://bmjuff4scs23k" path="res://Assets/Items/FireSalt.png" id="15_onyiw"]
+[ext_resource type="Texture2D" uid="uid://b8w2tvquq1i27" path="res://Assets/Ticket.png" id="18_jmida"]
+[ext_resource type="Script" path="res://book.gd" id="19_iuyn2"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -50,28 +55,28 @@ metadata/_edit_use_anchors_ = true
 
 [node name="JuniperBerries" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.0685764
-anchor_top = 0.333333
-anchor_right = 0.176215
-anchor_bottom = 0.402778
+anchor_left = 0.0824653
+anchor_top = 0.25463
+anchor_right = 0.185764
+anchor_bottom = 0.319444
 texture = ExtResource("5_a7po6")
 id = 4
 
 [node name="Thistle" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.0199653
-anchor_top = 0.253086
-anchor_right = 0.0520833
-anchor_bottom = 0.320988
+anchor_left = 0.0277778
+anchor_top = 0.334877
+anchor_right = 0.0598958
+anchor_bottom = 0.402779
 offset_bottom = -1.52588e-05
 texture = ExtResource("5_xkbwm")
 
 [node name="Nightshade" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.192708
-anchor_top = 0.248457
-anchor_right = 0.242188
-anchor_bottom = 0.327161
+anchor_left = 0.116319
+anchor_top = 0.327161
+anchor_right = 0.161458
+anchor_bottom = 0.399691
 texture = ExtResource("6_1tqn1")
 id = 1
 
@@ -96,29 +101,56 @@ id = 3
 
 [node name="Taproot" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.315972
-anchor_top = 0.0740741
-anchor_right = 0.380208
-anchor_bottom = 0.191358
+anchor_left = 0.289931
+anchor_top = 0.0895062
+anchor_right = 0.354167
+anchor_bottom = 0.20679
 texture = ExtResource("10_dw8en")
 id = 5
 
 [node name="Cinnamon" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.493924
-anchor_top = 0.0941358
-anchor_right = 0.518229
-anchor_bottom = 0.185185
+anchor_left = 0.52691
+anchor_top = 0.109568
+anchor_right = 0.551215
+anchor_bottom = 0.200617
 texture = ExtResource("11_xvppc")
 id = 6
 
 [node name="BrownMushroom" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.400174
-anchor_top = 0.100309
-anchor_right = 0.460069
-anchor_bottom = 0.189815
+anchor_left = 0.365451
+anchor_top = 0.118827
+anchor_right = 0.425346
+anchor_bottom = 0.208333
 texture = ExtResource("12_42w0p")
+
+[node name="RedMushroom" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.575521
+anchor_top = 0.108025
+anchor_right = 0.642361
+anchor_bottom = 0.20216
+texture = ExtResource("13_ism3j")
+id = 8
+
+[node name="Nirnroot" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.658854
+anchor_top = 0.12963
+anchor_right = 0.719618
+anchor_bottom = 0.233025
+texture = ExtResource("14_6pt30")
+id = 9
+
+[node name="FireSalt" parent="." instance=ExtResource("3_sauvc")]
+layout_mode = 1
+anchor_left = 0.445313
+anchor_top = 0.146605
+anchor_right = 0.500868
+anchor_bottom = 0.216049
+texture = ExtResource("15_onyiw")
+id = 10
 
 [node name="Requests" type="Node" parent="."]
 script = ExtResource("9_68357")
@@ -156,6 +188,30 @@ anchor_top = 0.529321
 anchor_right = 0.980903
 anchor_bottom = 0.66358
 offset_top = -3.05176e-05
+
+[node name="Book" type="Node" parent="."]
+script = ExtResource("19_iuyn2")
+
+[node name="Small" type="TextureRect" parent="Book"]
+anchors_preset = -1
+anchor_left = 0.0807292
+anchor_top = 0.552469
+anchor_right = 0.172743
+anchor_bottom = 0.614198
+texture = ExtResource("18_jmida")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Big" type="TextureRect" parent="Book"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.0737847
+anchor_top = 0.117284
+anchor_right = 0.953993
+anchor_bottom = 0.854938
+texture = ExtResource("18_jmida")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="Potion_Brewed" from="Cauldron" to="Requests" method="_on_cauldron_potion_brewed"]
 [connection signal="timeout" from="Requests/RequestTimer" to="Requests" method="_on_request_timer_timeout"]
