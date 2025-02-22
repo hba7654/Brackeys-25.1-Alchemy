@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=34 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="FontFile" uid="uid://cvr1pntrac57v" path="res://Assets/DeliciousHandrawn-Regular.ttf" id="1_okp7g"]
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
@@ -21,11 +21,12 @@
 [ext_resource type="Texture2D" uid="uid://q40pl17g77tj" path="res://Assets/Items/ChaurusEgg.png" id="16_6p8qr"]
 [ext_resource type="Texture2D" uid="uid://codmhtbqwjl4" path="res://Assets/Items/IceWraithTeeth.png" id="17_g4o5r"]
 [ext_resource type="Texture2D" uid="uid://drjchvhbdhld8" path="res://Assets/Items/LizardTail.png" id="18_5d0gs"]
-[ext_resource type="Texture2D" uid="uid://b8w2tvquq1i27" path="res://Assets/Ticket.png" id="18_jmida"]
 [ext_resource type="Texture2D" uid="uid://cygdrobxpflnk" path="res://Assets/Items/Eyeball.png" id="19_3k45i"]
 [ext_resource type="Script" path="res://book.gd" id="19_iuyn2"]
 [ext_resource type="Texture2D" uid="uid://br3rjj4nps564" path="res://Assets/Items/FairyDust.png" id="20_5o6mr"]
 [ext_resource type="Texture2D" uid="uid://bho7keaaia41m" path="res://icon.svg" id="25_pj2av"]
+[ext_resource type="Texture2D" uid="uid://ccc12hu4pdy5k" path="res://Assets/BookAlhemy.png" id="25_usec6"]
+[ext_resource type="Texture2D" uid="uid://dlcjk7exy68hi" path="res://Assets/BookOpen.png" id="26_qvk34"]
 [ext_resource type="Texture2D" uid="uid://crfsaq7jvpsvn" path="res://Assets/LeftArrow.png" id="27_d562i"]
 [ext_resource type="Texture2D" uid="uid://cumnuqe66wf" path="res://Assets/RightArrow.png" id="28_vy4jb"]
 
@@ -261,11 +262,12 @@ script = ExtResource("19_iuyn2")
 
 [node name="Small" type="TextureRect" parent="Book"]
 anchors_preset = -1
-anchor_left = 0.0807292
-anchor_top = 0.552469
-anchor_right = 0.172743
-anchor_bottom = 0.614198
-texture = ExtResource("18_jmida")
+anchor_left = 0.0876736
+anchor_top = 0.532407
+anchor_right = 0.163194
+anchor_bottom = 0.628086
+offset_bottom = -3.05176e-05
+texture = ExtResource("25_usec6")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -275,26 +277,28 @@ anchor_left = 0.0737847
 anchor_top = 0.117284
 anchor_right = 0.953993
 anchor_bottom = 0.854938
-texture = ExtResource("18_jmida")
+texture = ExtResource("26_qvk34")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Image" type="TextureRect" parent="Book/Big"]
-layout_mode = 0
-anchor_left = 0.377712
-anchor_top = 0.156904
-anchor_right = 0.60355
-anchor_bottom = 0.462343
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.156805
+anchor_top = 0.274059
+anchor_right = 0.430966
+anchor_bottom = 0.738494
 texture = ExtResource("25_pj2av")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Name" type="Label" parent="Book/Big"]
-layout_mode = 0
-anchor_left = 0.22288
-anchor_top = 0.512552
-anchor_right = 0.782051
-anchor_bottom = 0.610879
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.510848
+anchor_top = 0.177824
+anchor_right = 0.930966
+anchor_bottom = 0.276151
 offset_top = -1.52588e-05
 theme = SubResource("Theme_632kg")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -304,14 +308,17 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Ingredients" type="Label" parent="Book/Big"]
-layout_mode = 0
-anchor_left = 0.159763
-anchor_top = 0.696653
-anchor_right = 0.824458
-anchor_bottom = 0.782427
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.516765
+anchor_top = 0.370293
+anchor_right = 0.92998
+anchor_bottom = 0.797071
 theme = SubResource("Theme_x7d70")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Ingredient 1, Ingredient 2, Ingredient 3"
+text = "Ingredient 1,
+ Ingredient 2,
+ Ingredient 3"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -319,14 +326,11 @@ metadata/_edit_use_anchors_ = true
 [node name="PageLeft" type="TextureRect" parent="Book/Big"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0463511
-anchor_top = 0.441423
-anchor_right = 0.138067
-anchor_bottom = 0.525105
-offset_left = 4.31065
-offset_top = 17.6569
-offset_right = 4.31064
-offset_bottom = 17.6569
+anchor_left = 0.0621302
+anchor_top = 0.851465
+anchor_right = 0.153846
+anchor_bottom = 0.935147
+offset_bottom = -3.05176e-05
 texture = ExtResource("27_d562i")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
@@ -346,10 +350,10 @@ metadata/_edit_use_anchors_ = true
 [node name="PageRight" type="TextureRect" parent="Book/Big"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.837278
-anchor_top = 0.5
-anchor_right = 0.928994
-anchor_bottom = 0.583682
+anchor_left = 0.860947
+anchor_top = 0.799164
+anchor_right = 0.952663
+anchor_bottom = 0.882845
 offset_bottom = 1.52588e-05
 texture = ExtResource("28_vy4jb")
 expand_mode = 1
