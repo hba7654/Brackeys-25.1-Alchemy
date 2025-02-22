@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=38 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="FontFile" uid="uid://cvr1pntrac57v" path="res://Assets/DeliciousHandrawn-Regular.ttf" id="1_okp7g"]
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://dlcjk7exy68hi" path="res://Assets/BookOpen.png" id="26_qvk34"]
 [ext_resource type="Texture2D" uid="uid://crfsaq7jvpsvn" path="res://Assets/LeftArrow.png" id="27_d562i"]
 [ext_resource type="Texture2D" uid="uid://cumnuqe66wf" path="res://Assets/RightArrow.png" id="28_vy4jb"]
+[ext_resource type="Texture2D" uid="uid://cfn0rv13efn8q" path="res://Assets/Explosion.png" id="30_3k566"]
+[ext_resource type="Script" path="res://fail_box.gd" id="31_nik3j"]
 
 [sub_resource type="Theme" id="Theme_ttcmm"]
 default_font = ExtResource("1_okp7g")
@@ -292,6 +294,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Big" type="TextureRect" parent="Book"]
+visible = false
 anchors_preset = -1
 anchor_left = 0.0651042
 anchor_top = 0.0972222
@@ -403,6 +406,23 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Close: Q"
 metadata/_edit_use_anchors_ = true
 
+[node name="FailBox" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.413194
+anchor_top = 0.285494
+anchor_right = 0.599826
+anchor_bottom = 0.503086
+texture = ExtResource("30_3k566")
+expand_mode = 1
+script = ExtResource("31_nik3j")
+metadata/_edit_use_anchors_ = true
+
+[node name="showTime" type="Timer" parent="FailBox"]
+
+[connection signal="Fail" from="Cauldron" to="FailBox" method="_on_cauldron_fail"]
 [connection signal="Potion_Brewed" from="Cauldron" to="Requests" method="_on_cauldron_potion_brewed"]
 [connection signal="Potion_Brewed" from="Cauldron" to="Book" method="_on_cauldron_potion_brewed"]
 [connection signal="timeout" from="Requests/RequestTimer" to="Requests" method="_on_request_timer_timeout"]
+[connection signal="timeout" from="FailBox/showTime" to="FailBox" method="_on_show_time_timeout"]
