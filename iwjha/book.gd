@@ -6,12 +6,12 @@ const _PAGES = {
 	0: {"image": "res://Assets/Potions/Potion.png", "Name": "Potion Basics", "Ingredients": "1 Flower\n1 Root/Fungus\n1 Animal Part"},
 	1: {"image": "res://Assets/Potions/HealthPotion.png", "Name": "Health Potion", "Ingredients": "1 Marigold\n1 Mushroom\n1 Fairy Dust"},
 	2: {"image": "res://Assets/Potions/PoisonPotion.png", "Name": "Poison Potion", "Ingredients": "1 Nightshade\n1 Brown mushroom\n1 Ice Wraith Teeth / 1 Lizard Tail"},
-	3: {"image": "", "Name": "Alchohol Immunity Potion", "Ingredients": "1 Juniper Berries / 1 Thistle\n1 Taproot\n1 Chaurus Egg"},
-	4: {"image": "", "Name": "Fire Resistance Potion", "Ingredients": "1 Marigold\n1 Fire Salts\n1 Lizard Tail"},
-	5: {"image": "", "Name": "Romeo/Juliet Potion", "Ingredients": "1 Lavender\n1 Root\n1 Fairy Dust"},
-	6: {"image": "", "Name": "Munster Energy Potion", "Ingredients": "1 Thistle\n1 Nirnroot\n1 Eyeball / 1 Chaurus Egg"},
-	7: {"image": "", "Name": "Stealth Potion", "Ingredients": "1 Nightshade\n1 Taproot / 1 Red Mushroom\n1 Eyeball"},
-	8: {"image": "", "Name": "All On Red Potion", "Ingredients": "1 Juniper Berries / Lavender\n1 Fire Salts\n1 Ice Wraith Teeth"},
+	3: {"image": "res://Assets/Potions/AlcholPotion.png", "Name": "Alchohol Immunity Potion", "Ingredients": "1 Juniper Berries / 1 Thistle\n1 Taproot\n1 Chaurus Egg"},
+	4: {"image": "res://Assets/Potions/FireResPotion.png", "Name": "Fire Resistance Potion", "Ingredients": "1 Marigold\n1 Fire Salts\n1 Lizard Tail"},
+	5: {"image": "res://Assets/Potions/RomeoPotion.png", "Name": "Romeo/Juliet Potion", "Ingredients": "1 Lavender\n1 Root\n1 Fairy Dust"},
+	6: {"image": "res://Assets/Potions/MunsterEnergy.png", "Name": "Munster Energy Potion", "Ingredients": "1 Thistle\n1 Nirnroot\n1 Eyeball / 1 Chaurus Egg"},
+	7: {"image": "res://Assets/Potions/StealthPotion.png", "Name": "Stealth Potion", "Ingredients": "1 Nightshade\n1 Taproot / 1 Red Mushroom\n1 Eyeball"},
+	8: {"image": "res://Assets/Potions/AllOnRedPotion.png", "Name": "All On Red Potion", "Ingredients": "1 Juniper Berries / Lavender\n1 Fire Salts\n1 Ice Wraith Teeth"},
 }
 
 var _DISCOVERED = {

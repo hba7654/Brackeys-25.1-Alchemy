@@ -14,12 +14,12 @@ const _POTION_TYPES = [
 const _POTION_IMAGES = [
 	"res://Assets/Potions/HealthPotion.png",
 	"res://Assets/Potions/PoisonPotion.png",
-	"Alchohol Immunity Potion",
-	"Fire Resistance Potion",
-	"Romeo/Juliet Potion",
-	"Munster Energy Potion",
-	"Stealth Potion",
-	"All On Red Potion"
+	"res://Assets/Potions/AlcholPotion.png",
+	"res://Assets/Potions/FireResPotion.png",
+	"res://Assets/Potions/RomeoPotion.png",
+	"res://Assets/Potions/MunsterEnergy.png",
+	"res://Assets/Potions/StealthPotion.png",
+	"res://Assets/Potions/AllOnRedPotion.png"
 	]
 
 var requests = ["","","",""]
