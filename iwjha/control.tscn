@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=26 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
 [ext_resource type="Texture2D" uid="uid://c1r7uso83dp2w" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cygdrobxpflnk" path="res://Assets/Items/Eyeball.png" id="19_3k45i"]
 [ext_resource type="Script" path="res://book.gd" id="19_iuyn2"]
 [ext_resource type="Texture2D" uid="uid://br3rjj4nps564" path="res://Assets/Items/FairyDust.png" id="20_5o6mr"]
+[ext_resource type="Texture2D" uid="uid://bho7keaaia41m" path="res://icon.svg" id="25_pj2av"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -254,7 +255,6 @@ expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Big" type="TextureRect" parent="Book"]
-visible = false
 anchors_preset = -1
 anchor_left = 0.0737847
 anchor_top = 0.117284
@@ -262,6 +262,29 @@ anchor_right = 0.953993
 anchor_bottom = 0.854938
 texture = ExtResource("18_jmida")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Image" type="TextureRect" parent="Book/Big"]
+layout_mode = 0
+anchor_left = 0.377712
+anchor_top = 0.156904
+anchor_right = 0.60355
+anchor_bottom = 0.462343
+texture = ExtResource("25_pj2av")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="Book/Big"]
+layout_mode = 0
+anchor_left = 0.22288
+anchor_top = 0.512552
+anchor_right = 0.782051
+anchor_bottom = 0.610879
+offset_top = -1.52588e-05
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sample Text"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="Potion_Brewed" from="Cauldron" to="Requests" method="_on_cauldron_potion_brewed"]
