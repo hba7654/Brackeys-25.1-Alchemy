@@ -54,7 +54,16 @@ func _setContent() -> void:
 		$Big/Ingredients.text = _PAGES[_currPage]["Ingredients"]
 	else:
 		$Big/Ingredients.text = ""
-
+		
+	if _currPage != 0:
+		$Big/PageLeft.show()
+	else:
+		$Big/PageLeft.hide()
+		
+	if _currPage != 8:
+		$Big/PageRight.show()
+	else:
+		$Big/PageRight.hide()
 
 func _on_cauldron_potion_brewed(type: String) -> void:
 	if !_DISCOVERED[type]["discovered"]:
