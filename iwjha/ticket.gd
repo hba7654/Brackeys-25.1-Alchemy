@@ -6,8 +6,3 @@ var label = null
 func _ready() -> void:
 	image = $Image
 	label = $Label
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass

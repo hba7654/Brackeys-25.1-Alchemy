@@ -1,38 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://dex4sdxwtrrm5"]
+[gd_scene load_steps=6 format=3 uid="uid://dex4sdxwtrrm5"]
 
 [ext_resource type="Texture2D" uid="uid://b8w2tvquq1i27" path="res://Assets/Ticket.png" id="1_axhe2"]
+[ext_resource type="FontFile" uid="uid://cvr1pntrac57v" path="res://Assets/DeliciousHandrawn-Regular.ttf" id="1_xdn5q"]
 [ext_resource type="Script" path="res://ticket.gd" id="2_04o45"]
 
+[sub_resource type="Theme" id="Theme_js38x"]
+default_font = ExtResource("1_xdn5q")
+default_font_size = 25
+
 [sub_resource type="Theme" id="Theme_acex4"]
-default_font_size = 10
+default_font_size = 12
 
 [node name="Ticket" type="TextureRect"]
 anchors_preset = -1
-anchor_right = 0.0555556
-anchor_bottom = 0.134259
+anchor_right = 0.0763889
+anchor_bottom = 0.226852
+theme = SubResource("Theme_js38x")
 texture = ExtResource("1_axhe2")
 expand_mode = 1
 script = ExtResource("2_04o45")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image" type="TextureRect" parent="."]
-layout_mode = 0
-anchor_left = 0.265625
-anchor_top = 0.195402
-anchor_right = 0.71875
-anchor_bottom = 0.517241
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.272727
+anchor_top = 0.156463
+anchor_right = 0.725852
+anchor_bottom = 0.478302
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.078125
-anchor_top = 0.563218
-anchor_right = 0.90625
-anchor_bottom = 0.91954
+anchor_left = 0.0340909
+anchor_top = 0.489796
+anchor_right = 0.954545
+anchor_bottom = 0.951334
 theme = SubResource("Theme_acex4")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
 text = "Potion Name"
 horizontal_alignment = 1
 autowrap_mode = 2

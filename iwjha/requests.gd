@@ -12,8 +12,8 @@ const _POTION_TYPES = [
 	]
 	
 const _POTION_IMAGES = [
-	"Health Potion",
-	"Poison Potion",
+	"res://Assets/Potions/HealthPotion.png",
+	"res://Assets/Potions/PoisonPotion.png",
 	"Alchohol Immunity Potion",
 	"Fire Resistance Potion",
 	"Romeo/Juliet Potion",
@@ -33,12 +33,6 @@ func _ready() -> void:
 		if child is Ticket:
 			tickets[i] = child
 			i += 1
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
 
 func _on_request_timer_timeout() -> void:
 	for n in range(4):

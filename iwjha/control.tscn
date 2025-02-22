@@ -1,5 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=30 format=3 uid="uid://71iyctxttt1i"]
 
+[ext_resource type="FontFile" uid="uid://cvr1pntrac57v" path="res://Assets/DeliciousHandrawn-Regular.ttf" id="1_okp7g"]
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
 [ext_resource type="Texture2D" uid="uid://c1r7uso83dp2w" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
 [ext_resource type="Script" path="res://slot.gd" id="2_pktdi"]
@@ -26,6 +27,17 @@
 [ext_resource type="Texture2D" uid="uid://br3rjj4nps564" path="res://Assets/Items/FairyDust.png" id="20_5o6mr"]
 [ext_resource type="Texture2D" uid="uid://bho7keaaia41m" path="res://icon.svg" id="25_pj2av"]
 
+[sub_resource type="Theme" id="Theme_ttcmm"]
+default_font = ExtResource("1_okp7g")
+
+[sub_resource type="Theme" id="Theme_632kg"]
+default_font = ExtResource("1_okp7g")
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_x7d70"]
+default_font = ExtResource("1_okp7g")
+default_font_size = 25
+
 [node name="UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -33,6 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_ttcmm")
 script = ExtResource("1_t8ps7")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -213,33 +226,31 @@ autostart = true
 
 [node name="Ticket1" parent="Requests" instance=ExtResource("10_np0i0")]
 visible = false
-anchor_left = 0.934028
-anchor_top = 0.0787037
-anchor_right = 0.989583
-anchor_bottom = 0.212963
+anchor_left = 0.936632
+anchor_top = 0.0216049
+anchor_right = 0.992188
+anchor_bottom = 0.175926
 
 [node name="Ticket2" parent="Requests" instance=ExtResource("10_np0i0")]
 visible = false
-anchor_left = 0.934896
-anchor_top = 0.37963
-anchor_right = 0.990451
-anchor_bottom = 0.513889
-offset_top = -1.52588e-05
+anchor_left = 0.940104
+anchor_top = 0.364198
+anchor_right = 0.99566
+anchor_bottom = 0.520062
 
 [node name="Ticket3" parent="Requests" instance=ExtResource("10_np0i0")]
 visible = false
-anchor_left = 0.921875
-anchor_top = 0.234568
-anchor_right = 0.977431
-anchor_bottom = 0.368827
+anchor_left = 0.917535
+anchor_top = 0.191358
+anchor_right = 0.97309
+anchor_bottom = 0.356481
 
 [node name="Ticket4" parent="Requests" instance=ExtResource("10_np0i0")]
 visible = false
-anchor_left = 0.925347
-anchor_top = 0.529321
-anchor_right = 0.980903
-anchor_bottom = 0.66358
-offset_top = -3.05176e-05
+anchor_left = 0.921007
+anchor_top = 0.518519
+anchor_right = 0.976563
+anchor_bottom = 0.682099
 
 [node name="Book" type="Node" parent="."]
 script = ExtResource("19_iuyn2")
@@ -255,6 +266,7 @@ expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Big" type="TextureRect" parent="Book"]
+visible = false
 anchors_preset = -1
 anchor_left = 0.0737847
 anchor_top = 0.117284
@@ -281,11 +293,26 @@ anchor_top = 0.512552
 anchor_right = 0.782051
 anchor_bottom = 0.610879
 offset_top = -1.52588e-05
+theme = SubResource("Theme_632kg")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Sample Text"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Ingredients" type="Label" parent="Book/Big"]
+layout_mode = 0
+anchor_left = 0.159763
+anchor_top = 0.696653
+anchor_right = 0.824458
+anchor_bottom = 0.782427
+theme = SubResource("Theme_x7d70")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Ingredient 1, Ingredient 2, Ingredient 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [connection signal="Potion_Brewed" from="Cauldron" to="Requests" method="_on_cauldron_potion_brewed"]
+[connection signal="Potion_Brewed" from="Cauldron" to="Book" method="_on_cauldron_potion_brewed"]
 [connection signal="timeout" from="Requests/RequestTimer" to="Requests" method="_on_request_timer_timeout"]
