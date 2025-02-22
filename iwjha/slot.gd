@@ -1,5 +1,6 @@
 extends Container
 signal Potion_Brewed(type: String)
+signal Fail()
 
 const _FIRST_FLOWER: int = 0
 const _LAST_FLOWER: int = 4
@@ -74,6 +75,7 @@ func _brew() -> String:
 
 		
 func _fail() -> String:
+	Fail.emit()
 	return "Fail"
 	
 

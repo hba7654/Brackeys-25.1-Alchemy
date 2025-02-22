@@ -1,8 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=38 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="FontFile" uid="uid://cvr1pntrac57v" path="res://Assets/DeliciousHandrawn-Regular.ttf" id="1_okp7g"]
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
-[ext_resource type="Texture2D" uid="uid://c1r7uso83dp2w" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
+[ext_resource type="Texture2D" uid="uid://ds2cbo5q8v83i" path="res://Assets/MPO!_Background.png" id="2_jg5lu"]
 [ext_resource type="Script" path="res://slot.gd" id="2_pktdi"]
 [ext_resource type="PackedScene" uid="uid://rpumhyxptprg" path="res://item.tscn" id="3_sauvc"]
 [ext_resource type="Texture2D" uid="uid://drbhvf6ms0ijq" path="res://Assets/Items/JuniperBerries.png" id="5_a7po6"]
@@ -21,13 +21,21 @@
 [ext_resource type="Texture2D" uid="uid://q40pl17g77tj" path="res://Assets/Items/ChaurusEgg.png" id="16_6p8qr"]
 [ext_resource type="Texture2D" uid="uid://codmhtbqwjl4" path="res://Assets/Items/IceWraithTeeth.png" id="17_g4o5r"]
 [ext_resource type="Texture2D" uid="uid://drjchvhbdhld8" path="res://Assets/Items/LizardTail.png" id="18_5d0gs"]
-[ext_resource type="Texture2D" uid="uid://b8w2tvquq1i27" path="res://Assets/Ticket.png" id="18_jmida"]
 [ext_resource type="Texture2D" uid="uid://cygdrobxpflnk" path="res://Assets/Items/Eyeball.png" id="19_3k45i"]
 [ext_resource type="Script" path="res://book.gd" id="19_iuyn2"]
 [ext_resource type="Texture2D" uid="uid://br3rjj4nps564" path="res://Assets/Items/FairyDust.png" id="20_5o6mr"]
 [ext_resource type="Texture2D" uid="uid://bho7keaaia41m" path="res://icon.svg" id="25_pj2av"]
+[ext_resource type="Texture2D" uid="uid://ccc12hu4pdy5k" path="res://Assets/BookAlhemy.png" id="25_usec6"]
+[ext_resource type="Texture2D" uid="uid://dlcjk7exy68hi" path="res://Assets/BookOpen.png" id="26_qvk34"]
+[ext_resource type="Texture2D" uid="uid://crfsaq7jvpsvn" path="res://Assets/LeftArrow.png" id="27_d562i"]
+[ext_resource type="Texture2D" uid="uid://cumnuqe66wf" path="res://Assets/RightArrow.png" id="28_vy4jb"]
+[ext_resource type="Texture2D" uid="uid://cfn0rv13efn8q" path="res://Assets/Explosion.png" id="30_3k566"]
+[ext_resource type="Script" path="res://fail_box.gd" id="31_nik3j"]
 
 [sub_resource type="Theme" id="Theme_ttcmm"]
+default_font = ExtResource("1_okp7g")
+
+[sub_resource type="Theme" id="Theme_61pr8"]
 default_font = ExtResource("1_okp7g")
 
 [sub_resource type="Theme" id="Theme_632kg"]
@@ -37,6 +45,12 @@ default_font_size = 30
 [sub_resource type="Theme" id="Theme_x7d70"]
 default_font = ExtResource("1_okp7g")
 default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_6mfrb"]
+default_font = ExtResource("1_okp7g")
+
+[sub_resource type="Theme" id="Theme_5t6d1"]
+default_font = ExtResource("1_okp7g")
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -62,12 +76,11 @@ expand_mode = 1
 [node name="Cauldron" type="Container" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.3125
-anchor_top = 0.25
-anchor_right = 0.657569
-anchor_bottom = 0.655864
-offset_top = 1.52588e-05
-offset_right = -134.52
+anchor_left = 0.393229
+anchor_top = 0.41358
+anchor_right = 0.613229
+anchor_bottom = 0.669753
+offset_right = -109.44
 scale = Vector2(1.76, 1)
 script = ExtResource("2_pktdi")
 metadata/_edit_use_anchors_ = true
@@ -120,55 +133,55 @@ id = 3
 
 [node name="Taproot" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.289931
+anchor_left = 0.271701
 anchor_top = 0.0895062
-anchor_right = 0.354167
+anchor_right = 0.335937
 anchor_bottom = 0.20679
 texture = ExtResource("10_dw8en")
 id = 5
 
 [node name="Cinnamon" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.52691
-anchor_top = 0.109568
-anchor_right = 0.551215
-anchor_bottom = 0.200617
+anchor_left = 0.571181
+anchor_top = 0.111111
+anchor_right = 0.595486
+anchor_bottom = 0.20216
 texture = ExtResource("11_xvppc")
 id = 6
 
 [node name="BrownMushroom" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.365451
-anchor_top = 0.118827
-anchor_right = 0.425346
-anchor_bottom = 0.208333
+anchor_left = 0.342014
+anchor_top = 0.114198
+anchor_right = 0.401909
+anchor_bottom = 0.203704
 texture = ExtResource("12_42w0p")
 id = 7
 
 [node name="RedMushroom" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.575521
-anchor_top = 0.108025
-anchor_right = 0.642361
-anchor_bottom = 0.20216
+anchor_left = 0.611979
+anchor_top = 0.111111
+anchor_right = 0.678819
+anchor_bottom = 0.205246
 texture = ExtResource("13_ism3j")
 id = 8
 
 [node name="Nirnroot" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.658854
-anchor_top = 0.12963
-anchor_right = 0.719618
-anchor_bottom = 0.233025
+anchor_left = 0.684028
+anchor_top = 0.132716
+anchor_right = 0.744792
+anchor_bottom = 0.236111
 texture = ExtResource("14_6pt30")
 id = 9
 
 [node name="FireSalt" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.445313
-anchor_top = 0.146605
-anchor_right = 0.500868
-anchor_bottom = 0.216049
+anchor_left = 0.41059
+anchor_top = 0.141975
+anchor_right = 0.466145
+anchor_bottom = 0.211419
 texture = ExtResource("15_onyiw")
 id = 10
 
@@ -257,41 +270,58 @@ script = ExtResource("19_iuyn2")
 
 [node name="Small" type="TextureRect" parent="Book"]
 anchors_preset = -1
-anchor_left = 0.0807292
-anchor_top = 0.552469
-anchor_right = 0.172743
-anchor_bottom = 0.614198
-texture = ExtResource("18_jmida")
+anchor_left = 0.0876736
+anchor_top = 0.532407
+anchor_right = 0.163194
+anchor_bottom = 0.628086
+offset_bottom = -3.05176e-05
+texture = ExtResource("25_usec6")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Book/Small"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.931035
+anchor_top = 0.629032
+anchor_right = 1.2069
+anchor_bottom = 0.967742
+theme = SubResource("Theme_61pr8")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Q"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Big" type="TextureRect" parent="Book"]
 visible = false
 anchors_preset = -1
-anchor_left = 0.0737847
-anchor_top = 0.117284
+anchor_left = 0.0651042
+anchor_top = 0.0972222
 anchor_right = 0.953993
-anchor_bottom = 0.854938
-texture = ExtResource("18_jmida")
+anchor_bottom = 0.96142
+texture = ExtResource("26_qvk34")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Image" type="TextureRect" parent="Book/Big"]
-layout_mode = 0
-anchor_left = 0.377712
-anchor_top = 0.156904
-anchor_right = 0.60355
-anchor_bottom = 0.462343
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.156805
+anchor_top = 0.274059
+anchor_right = 0.430966
+anchor_bottom = 0.738494
 texture = ExtResource("25_pj2av")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Name" type="Label" parent="Book/Big"]
-layout_mode = 0
-anchor_left = 0.22288
-anchor_top = 0.512552
-anchor_right = 0.782051
-anchor_bottom = 0.610879
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.510848
+anchor_top = 0.177824
+anchor_right = 0.930966
+anchor_bottom = 0.276151
 offset_top = -1.52588e-05
 theme = SubResource("Theme_632kg")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -301,18 +331,98 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Ingredients" type="Label" parent="Book/Big"]
-layout_mode = 0
-anchor_left = 0.159763
-anchor_top = 0.696653
-anchor_right = 0.824458
-anchor_bottom = 0.782427
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.516765
+anchor_top = 0.370293
+anchor_right = 0.92998
+anchor_bottom = 0.797071
 theme = SubResource("Theme_x7d70")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Ingredient 1, Ingredient 2, Ingredient 3"
+text = "Ingredient 1
+ Ingredient 2
+ Ingredient 3"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="PageLeft" type="TextureRect" parent="Book/Big"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0621302
+anchor_top = 0.851465
+anchor_right = 0.153846
+anchor_bottom = 0.935147
+offset_bottom = -3.05176e-05
+texture = ExtResource("27_d562i")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Book/Big/PageLeft"]
+layout_mode = 0
+anchor_left = 0.204301
+anchor_top = 0.199999
+anchor_right = 0.548387
+anchor_bottom = 0.774999
+theme = SubResource("Theme_6mfrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "A"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PageRight" type="TextureRect" parent="Book/Big"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.860947
+anchor_top = 0.799164
+anchor_right = 0.952663
+anchor_bottom = 0.882845
+offset_bottom = 1.52588e-05
+texture = ExtResource("28_vy4jb")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Book/Big/PageRight"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.451613
+anchor_top = 0.225
+anchor_right = 0.795699
+anchor_bottom = 0.8
+theme = SubResource("Theme_6mfrb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "D"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Book/Big"]
+layout_mode = 0
+anchor_left = 0.0483235
+anchor_top = 0.117155
+anchor_right = 0.129191
+anchor_bottom = 0.179916
+theme = SubResource("Theme_5t6d1")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Close: Q"
+metadata/_edit_use_anchors_ = true
+
+[node name="FailBox" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.413194
+anchor_top = 0.285494
+anchor_right = 0.599826
+anchor_bottom = 0.503086
+texture = ExtResource("30_3k566")
+expand_mode = 1
+script = ExtResource("31_nik3j")
+metadata/_edit_use_anchors_ = true
+
+[node name="showTime" type="Timer" parent="FailBox"]
+
+[connection signal="Fail" from="Cauldron" to="FailBox" method="_on_cauldron_fail"]
 [connection signal="Potion_Brewed" from="Cauldron" to="Requests" method="_on_cauldron_potion_brewed"]
 [connection signal="Potion_Brewed" from="Cauldron" to="Book" method="_on_cauldron_potion_brewed"]
 [connection signal="timeout" from="Requests/RequestTimer" to="Requests" method="_on_request_timer_timeout"]
+[connection signal="timeout" from="FailBox/showTime" to="FailBox" method="_on_show_time_timeout"]
