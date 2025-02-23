@@ -55,6 +55,7 @@ func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	_contents.push_back(data)
+	$DropSound.play()
 	print(_contents)
 	
 func _process(_delta: float) -> void:
@@ -62,6 +63,7 @@ func _process(_delta: float) -> void:
 		currPotion = _brew()
 		_contents = []	
 		print(currPotion)
+		
 	
 
 	
@@ -69,6 +71,7 @@ func _brew() -> String:
 	_contents.sort()
 	if POTIONS.has(_contents):
 		Potion_Brewed.emit(POTIONS[_contents])
+		$SuccessSound.play()
 		return POTIONS[_contents]
 	else:
 		return _fail()

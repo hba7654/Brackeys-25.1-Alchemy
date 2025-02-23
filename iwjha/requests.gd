@@ -14,12 +14,12 @@ const _POTION_TYPES = [
 const _POTION_IMAGES = [
 	"res://Assets/Potions/HealthPotion.png",
 	"res://Assets/Potions/PoisonPotion.png",
-	"Alchohol Immunity Potion",
-	"Fire Resistance Potion",
-	"Romeo/Juliet Potion",
-	"Munster Energy Potion",
-	"Stealth Potion",
-	"All On Red Potion"
+	"res://Assets/Potions/AlcholPotion.png",
+	"res://Assets/Potions/FireResPotion.png",
+	"res://Assets/Potions/RomeoPotion.png",
+	"res://Assets/Potions/MunsterEnergy.png",
+	"res://Assets/Potions/StealthPotion.png",
+	"res://Assets/Potions/AllOnRedPotion.png"
 	]
 
 var requests = ["","","",""]
@@ -42,6 +42,7 @@ func _on_request_timer_timeout() -> void:
 			tickets[n].image.texture = load(_POTION_IMAGES[type])
 			tickets[n].label.text = _POTION_TYPES[type]
 			tickets[n].show()
+			$RequestSound.play()
 			print(requests)
 			return
 	# If the slots are full stop the timer

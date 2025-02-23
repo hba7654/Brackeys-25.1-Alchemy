@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=47 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="FontFile" uid="uid://cvr1pntrac57v" path="res://Assets/DeliciousHandrawn-Regular.ttf" id="1_okp7g"]
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://drbhvf6ms0ijq" path="res://Assets/Items/JuniperBerries.png" id="5_a7po6"]
 [ext_resource type="Texture2D" uid="uid://bfg7u2biev2ha" path="res://Assets/Items/Thistle.png" id="5_xkbwm"]
 [ext_resource type="Texture2D" uid="uid://bbadlxbm46job" path="res://Assets/Items/Nightshade.png" id="6_1tqn1"]
+[ext_resource type="AudioStream" uid="uid://dmatxscx8kjey" path="res://Assets/Audio/drop_1.wav" id="6_7tmxo"]
 [ext_resource type="Texture2D" uid="uid://cx5ss7aj0xae1" path="res://Assets/Items/Lavender.png" id="7_lq6uc"]
 [ext_resource type="Texture2D" uid="uid://d3ptmbpdesg13" path="res://Assets/Items/Marigold.png" id="8_26ia2"]
 [ext_resource type="Script" path="res://requests.gd" id="9_68357"]
@@ -28,9 +29,17 @@
 [ext_resource type="Texture2D" uid="uid://ccc12hu4pdy5k" path="res://Assets/BookAlhemy.png" id="25_usec6"]
 [ext_resource type="Texture2D" uid="uid://dlcjk7exy68hi" path="res://Assets/BookOpen.png" id="26_qvk34"]
 [ext_resource type="Texture2D" uid="uid://crfsaq7jvpsvn" path="res://Assets/LeftArrow.png" id="27_d562i"]
+[ext_resource type="AudioStream" uid="uid://d0i1giev5deoa" path="res://Assets/Audio/249305-Goblin_Gibberish_1.wav" id="27_q3sy3"]
 [ext_resource type="Texture2D" uid="uid://cumnuqe66wf" path="res://Assets/RightArrow.png" id="28_vy4jb"]
 [ext_resource type="Texture2D" uid="uid://cfn0rv13efn8q" path="res://Assets/Explosion.png" id="30_3k566"]
 [ext_resource type="Script" path="res://fail_box.gd" id="31_nik3j"]
+[ext_resource type="AudioStream" uid="uid://ddn21yflwpffc" path="res://Assets/Audio/page_turn_2.wav" id="31_o3iil"]
+[ext_resource type="AudioStream" uid="uid://c88667uj6l77h" path="res://Assets/Audio/fart_2.wav" id="32_1s3eg"]
+[ext_resource type="AudioStream" uid="uid://58fnmmaojgmc" path="res://Assets/Audio/Music/GameMusciMPO.mp3" id="32_gqr26"]
+[ext_resource type="AudioStream" uid="uid://crfvawbsvwpld" path="res://Assets/Audio/splode_3.wav" id="33_btie6"]
+[ext_resource type="AudioStream" uid="uid://b35mmmfyord6n" path="res://Assets/Audio/cauldron.mp3" id="34_s0hle"]
+[ext_resource type="AudioStream" uid="uid://dn6aeboxm328u" path="res://Assets/Audio/yippee.wav" id="36_tfe8d"]
+[ext_resource type="AudioStream" uid="uid://c8ca3ndrvig6u" path="res://Assets/Audio/pickup_4.wav" id="38_4uuq6"]
 
 [sub_resource type="Theme" id="Theme_ttcmm"]
 default_font = ExtResource("1_okp7g")
@@ -85,14 +94,28 @@ scale = Vector2(1.76, 1)
 script = ExtResource("2_pktdi")
 metadata/_edit_use_anchors_ = true
 
+[node name="SuccessSound" type="AudioStreamPlayer" parent="Cauldron"]
+stream = ExtResource("36_tfe8d")
+volume_db = -2.0
+playback_type = 1
+
+[node name="DropSound" type="AudioStreamPlayer" parent="Cauldron"]
+stream = ExtResource("6_7tmxo")
+volume_db = 3.0
+playback_type = 1
+
 [node name="JuniperBerries" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.0824653
-anchor_top = 0.25463
-anchor_right = 0.185764
-anchor_bottom = 0.319444
+anchor_left = 0.104167
+anchor_top = 0.263889
+anchor_right = 0.170139
+anchor_bottom = 0.316358
 texture = ExtResource("5_a7po6")
 id = 4
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="JuniperBerries"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
 
 [node name="Thistle" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
@@ -103,6 +126,10 @@ anchor_bottom = 0.402779
 offset_bottom = -1.52588e-05
 texture = ExtResource("5_xkbwm")
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="Thistle"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="Nightshade" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
 anchor_left = 0.116319
@@ -112,15 +139,23 @@ anchor_bottom = 0.399691
 texture = ExtResource("6_1tqn1")
 id = 1
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="Nightshade"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="Lavender" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.0121528
-anchor_top = 0.410494
+anchor_left = 0.0373264
+anchor_top = 0.42284
 anchor_right = 0.105903
 anchor_bottom = 0.469136
 offset_top = -3.05176e-05
 texture = ExtResource("7_lq6uc")
 id = 2
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="Lavender"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
 
 [node name="Marigold" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
@@ -131,59 +166,87 @@ anchor_bottom = 0.464506
 texture = ExtResource("8_26ia2")
 id = 3
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="Marigold"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="Taproot" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
 anchor_left = 0.271701
-anchor_top = 0.0895062
-anchor_right = 0.335937
-anchor_bottom = 0.20679
+anchor_top = 0.12037
+anchor_right = 0.329861
+anchor_bottom = 0.220679
 texture = ExtResource("10_dw8en")
 id = 5
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="Taproot"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="Cinnamon" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.571181
-anchor_top = 0.111111
-anchor_right = 0.595486
-anchor_bottom = 0.20216
+anchor_left = 0.574653
+anchor_top = 0.0848765
+anchor_right = 0.59809
+anchor_bottom = 0.194444
 texture = ExtResource("11_xvppc")
 id = 6
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="Cinnamon"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="BrownMushroom" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.342014
-anchor_top = 0.114198
-anchor_right = 0.401909
-anchor_bottom = 0.203704
+anchor_left = 0.338542
+anchor_top = 0.131173
+anchor_right = 0.389757
+anchor_bottom = 0.20679
 texture = ExtResource("12_42w0p")
 id = 7
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="BrownMushroom"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="RedMushroom" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.611979
-anchor_top = 0.111111
+anchor_left = 0.62066
+anchor_top = 0.123457
 anchor_right = 0.678819
-anchor_bottom = 0.205246
+anchor_bottom = 0.205247
 texture = ExtResource("13_ism3j")
 id = 8
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="RedMushroom"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="Nirnroot" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.684028
-anchor_top = 0.132716
+anchor_left = 0.6875
+anchor_top = 0.137346
 anchor_right = 0.744792
 anchor_bottom = 0.236111
 texture = ExtResource("14_6pt30")
 id = 9
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="Nirnroot"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="FireSalt" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.41059
-anchor_top = 0.141975
-anchor_right = 0.466145
-anchor_bottom = 0.211419
+anchor_left = 0.402778
+anchor_top = 0.154321
+anchor_right = 0.458333
+anchor_bottom = 0.208333
 texture = ExtResource("15_onyiw")
 id = 10
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="FireSalt"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
 
 [node name="ChaurusEgg" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
@@ -194,6 +257,10 @@ anchor_bottom = 0.888889
 texture = ExtResource("16_6p8qr")
 id = 11
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="ChaurusEgg"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="IceWraithTeeth" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
 anchor_left = 0.78125
@@ -202,6 +269,10 @@ anchor_right = 0.811632
 anchor_bottom = 0.887346
 texture = ExtResource("17_g4o5r")
 id = 12
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="IceWraithTeeth"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
 
 [node name="LizardTail" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
@@ -212,6 +283,10 @@ anchor_bottom = 0.817901
 texture = ExtResource("18_5d0gs")
 id = 13
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="LizardTail"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="Eyeball" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
 anchor_left = 0.809896
@@ -221,14 +296,22 @@ anchor_bottom = 0.709877
 texture = ExtResource("19_3k45i")
 id = 14
 
+[node name="PickupSound" type="AudioStreamPlayer" parent="Eyeball"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
+
 [node name="FairyDust" parent="." instance=ExtResource("3_sauvc")]
 layout_mode = 1
-anchor_left = 0.767361
-anchor_top = 0.75463
-anchor_right = 0.809028
-anchor_bottom = 0.805556
+anchor_left = 0.766493
+anchor_top = 0.760802
+anchor_right = 0.8125
+anchor_bottom = 0.822531
 texture = ExtResource("20_5o6mr")
 id = 15
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="FairyDust"]
+stream = ExtResource("38_4uuq6")
+playback_type = 1
 
 [node name="Requests" type="Node" parent="."]
 script = ExtResource("9_68357")
@@ -264,6 +347,10 @@ anchor_left = 0.921007
 anchor_top = 0.518519
 anchor_right = 0.976563
 anchor_bottom = 0.682099
+
+[node name="RequestSound" type="AudioStreamPlayer" parent="Requests"]
+stream = ExtResource("27_q3sy3")
+playback_type = 1
 
 [node name="Book" type="Node" parent="."]
 script = ExtResource("19_iuyn2")
@@ -406,6 +493,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Close: Q"
 metadata/_edit_use_anchors_ = true
 
+[node name="PageTurnSound" type="AudioStreamPlayer" parent="Book"]
+stream = ExtResource("31_o3iil")
+playback_type = 1
+
 [node name="FailBox" type="TextureRect" parent="."]
 visible = false
 layout_mode = 1
@@ -420,6 +511,27 @@ script = ExtResource("31_nik3j")
 metadata/_edit_use_anchors_ = true
 
 [node name="showTime" type="Timer" parent="FailBox"]
+
+[node name="FartSound" type="AudioStreamPlayer" parent="FailBox"]
+stream = ExtResource("32_1s3eg")
+playback_type = 1
+
+[node name="ExplodeSound" type="AudioStreamPlayer" parent="FailBox"]
+stream = ExtResource("33_btie6")
+playback_type = 1
+
+[node name="AudioManager" type="Node" parent="."]
+
+[node name="GameLoopMusic" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource("32_gqr26")
+autoplay = true
+playback_type = 1
+
+[node name="CauldronSound" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource("34_s0hle")
+volume_db = -10.0
+autoplay = true
+playback_type = 1
 
 [connection signal="Fail" from="Cauldron" to="FailBox" method="_on_cauldron_fail"]
 [connection signal="Potion_Brewed" from="Cauldron" to="Requests" method="_on_cauldron_potion_brewed"]
