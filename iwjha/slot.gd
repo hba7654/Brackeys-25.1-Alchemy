@@ -71,7 +71,7 @@ func _brew() -> String:
 	_contents.sort()
 	if POTIONS.has(_contents):
 		Potion_Brewed.emit(POTIONS[_contents])
-		$SuccessSound.play()
+		$BottleSound.play()
 		return POTIONS[_contents]
 	else:
 		return _fail()

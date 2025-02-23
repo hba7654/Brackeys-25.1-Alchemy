@@ -50,6 +50,7 @@ func _process(_delta: float) -> void:
 func _setContent() -> void:
 	$Big/Name.text = _PAGES[_currPage]["Name"]
 	$Big/Image.texture = load(_PAGES[_currPage]["image"])
+	$PageTurnSound.play()
 	if _DISCOVERED[_PAGES[_currPage]["Name"]]["discovered"]:
 		$Big/Ingredients.text = _PAGES[_currPage]["Ingredients"]
 	else:

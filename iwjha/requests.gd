@@ -54,6 +54,7 @@ func _on_cauldron_potion_brewed(type: String) -> void:
 		for n in range(4):
 			if requests[n] == type:
 				requests[n] = ""
+				$SuccessSound.play()
 				tickets[n].hide()
 				if $RequestTimer.is_stopped():
 					$RequestTimer.start()
