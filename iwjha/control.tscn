@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://71iyctxttt1i"]
+[gd_scene load_steps=47 format=3 uid="uid://71iyctxttt1i"]
 
 [ext_resource type="FontFile" uid="uid://cvr1pntrac57v" path="res://Assets/DeliciousHandrawn-Regular.ttf" id="1_okp7g"]
 [ext_resource type="Script" path="res://UI.gd" id="1_t8ps7"]
@@ -30,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://dlcjk7exy68hi" path="res://Assets/BookOpen.png" id="26_qvk34"]
 [ext_resource type="Texture2D" uid="uid://crfsaq7jvpsvn" path="res://Assets/LeftArrow.png" id="27_d562i"]
 [ext_resource type="AudioStream" uid="uid://d0i1giev5deoa" path="res://Assets/Audio/249305-Goblin_Gibberish_1.wav" id="27_q3sy3"]
-[ext_resource type="AudioStream" uid="uid://l5yw6mxeubyp" path="res://Assets/Audio/bottling_3.wav" id="28_7wawq"]
 [ext_resource type="Texture2D" uid="uid://cumnuqe66wf" path="res://Assets/RightArrow.png" id="28_vy4jb"]
 [ext_resource type="Texture2D" uid="uid://cfn0rv13efn8q" path="res://Assets/Explosion.png" id="30_3k566"]
 [ext_resource type="Script" path="res://fail_box.gd" id="31_nik3j"]
@@ -95,13 +94,14 @@ scale = Vector2(1.76, 1)
 script = ExtResource("2_pktdi")
 metadata/_edit_use_anchors_ = true
 
+[node name="SuccessSound" type="AudioStreamPlayer" parent="Cauldron"]
+stream = ExtResource("36_tfe8d")
+volume_db = -2.0
+playback_type = 1
+
 [node name="DropSound" type="AudioStreamPlayer" parent="Cauldron"]
 stream = ExtResource("6_7tmxo")
 volume_db = 3.0
-playback_type = 1
-
-[node name="BottleSound" type="AudioStreamPlayer" parent="Cauldron"]
-stream = ExtResource("28_7wawq")
 playback_type = 1
 
 [node name="JuniperBerries" parent="." instance=ExtResource("3_sauvc")]
@@ -352,11 +352,6 @@ anchor_bottom = 0.682099
 stream = ExtResource("27_q3sy3")
 playback_type = 1
 
-[node name="SuccessSound" type="AudioStreamPlayer" parent="Requests"]
-stream = ExtResource("36_tfe8d")
-volume_db = -2.0
-playback_type = 1
-
 [node name="Book" type="Node" parent="."]
 script = ExtResource("19_iuyn2")
 
@@ -529,13 +524,12 @@ playback_type = 1
 
 [node name="GameLoopMusic" type="AudioStreamPlayer" parent="AudioManager"]
 stream = ExtResource("32_gqr26")
-volume_db = -7.0
 autoplay = true
 playback_type = 1
 
 [node name="CauldronSound" type="AudioStreamPlayer" parent="AudioManager"]
 stream = ExtResource("34_s0hle")
-volume_db = -14.0
+volume_db = -10.0
 autoplay = true
 playback_type = 1
 
